@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MoE-GS">
+  <meta name="keywords" content="MoE-GS">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoE-GS</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./static/css/bootstrap-4.4.1.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/72.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/app.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+
+  <link rel="stylesheet" href="./static/css/dics.original.css">
+  <script src="./static/js/event_handler.js"></script>
+  <script src="./static/js/dics.original.js"></script>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LDMET8JBJC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LDMET8JBJC');
+  </script>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="margin-bottom: 0"><strong>MoE-GS :</strong></h1>
+            <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 0">Mixture of Experts for Dynamic Gaussian Splatting</h2>
+            <br>
+            <h2 class="title is-4" style="margin-top: 0; margin-bottom: 0">Anonymous submission</h2>
+            <h2 class="title is-5" style="margin-top: 1rem; margin-bottom: 0">Paper ID : 14595</h2>
+            <br>
+            <br>
+            <img src="https://iccv.thecvf.com/static/core/img/iccv-navbar-logo.svg" alt="ICCV Logo" style="width: 280px; height: auto;">
+            <br>
+            </div>
+
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://leejunoh.com/"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2311.16493.pdf"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+          
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/juno181/Ex4DGS/"
+                  class="external-link button is-normal is-rounded is-dark disabled">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+      <div class="row g-2">
+        <!-- Left Container -->
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <div class="video-container" style="width: 100%; position: relative; padding-top: 0; margin-top: 0;">
+            <video class="video" id="xyalias1" loop playsinline autoplay muted 
+                   src="./static/resources/video/combined_6_videos.mp4" onplay="resizeAndPlay2(this)" 
+                   style="width: 100%; height: auto; position: absolute; top: 0; left: 0; object-fit: contain;">
+            </video>
+          </div>
+          <canvas id="xyalias1Merge" class="videoMerge" style="width: 100%; margin-top: 5px;"></canvas>
+          <h2 class="subtitle text-center mt-1" style="margin-top: 8px;">
+            Separation result of static and dynamic Gaussians on the Coffee Martini scene
+          </h2>
+        </div>
+        
+        <!-- Right Container -->
+        <div class="col-md-6 d-flex flex-column align-items-center">
+          <div class="video-container" style="width: 100%; position: relative; padding-top: 0; margin-top: 0;">
+            <video class="video" id="xyalias2" loop playsinline autoplay muted 
+                   src="./static/resources/video/combined_6_videos.mp4" onplay="resizeAndPlay2(this)" 
+                   style="width: 100%; height: auto; position: absolute; top: 0; left: 0; object-fit: contain;">
+            </video>
+          </div>
+          <canvas id="xyalias2Merge" class="videoMerge" style="width: 100%; margin-top: 5px;"></canvas>
+          <h2 class="subtitle text-center mt-1" style="margin-top: 8px;">
+            Separation result of static and dynamic Gaussians on the Fabien scene
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent advances in dynamic scene reconstruction have leveraged the rendering speed and quality of 3D Gaussian Splatting. However, existing Gaussian-based approaches typically specialize in specific deformation types, limiting their generalizability.
+              In this paper, we propose Mixture of Experts for Dynamic Gaussian Splatting (MoE-GS), a unified framework that dynamically selects and blends multiple expert models using a learnable gating function. To the best of our knowledge, MoE-GS is the first method to introduce Mixture-of-Experts techniques into dynamic scene reconstruction.
+              A key contribution of our approach is the introduction of per-Gaussian routing weights learnable parameters that modulate each expert's contribution. These weights are projected onto a 2D plane via weight splatting, generating adaptive, time- and view-dependent blending weights, significantly improving reconstruction fidelity. Additionally, we present a knowledge distillation pipeline utilizing both per-Gaussian and expert-specific 2D weights derived from the MoE model, refining individual experts to achieve near-MoE quality with substantially reduced computational cost.
+              Our method achieves state-of-the-art results on multiple datasets, demonstrating its effectiveness across diverse dynamic scenes. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <img src="./static/resources/images/concept.png" class="center" style="width: 100%; height: auto;">
+          <div class="content has-text-justified">
+            <p style="margin-top: 30px">
+              A key innovation of MoE-GS is the Volumetric-aware Pixel Router, which efficiently integrates expert contributions while preserving both spatial and temporal consistency. 
+              A naive approach would be to perform gating directly at the pixel-level on rendered 2D images, but this cannot effectively capture time- and view-dependent variations. Conversely, 
+              assigning weights directly at the Gaussian-level enables more adaptive gating but poses significant optimization challenges due to the difficulty of matching Gaussians across different experts. To overcome these limitations, we propose a novel Volumetric-aware Pixel Router.
+              The proposed MoE-GS improves performance as the number of experts increases and further enhances individual experts through distillation-based fine-tuning without additional computational or memory overhead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3" style="margin-top: -20px">Method</h2>
+
+          <img src="./static/resources/images/overframwork.png" class="center" style="width: 100%; height: auto;">
+          <div class="content has-text-justified">
+            <p style="margin-top: 30px">
+              Our framework first optimizes each expert using Structure-from-Motion (SfM) points before passing the results to the Router. The Router then generates gating values to adaptively blend the expert-rendered images in the 2D domain. We incorporate various dynamic scene reconstruction models as experts, including MLP-based 
+              , reformulation-based, interpolation-based, and polynomial-based approaches. By leveraging a Mixture of Experts (MoE), our framework effectively combines the strengths of each expert, enhancing reconstruction quality.
+            </p>
+          </div>
+
+          <div class="image-container" style="text-align: center; margin-bottom: 20px;">
+            <img src="./static/resources/images/Router.png" class="center" style="width: auto; max-height: 600px; display: inline-block;">
+          </div>
+          <div class="content has-text-justified">
+            <p style="margin-top: 30px">
+              The pro-posed router processes Gaussians as inputs and introduces per-Gaussian routing weights, which are rendered through feature based splatting. The resulting 2D mixture features are then de-
+              coded using a lightweight MLP to compute time- and view-dependent 2D mixture opacity. Finally, a softmax function is ap-
+              plied to the expert outputs, generating the gating values for the final image synthesis.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 20px; padding-bottom: 20px;">
+    <div class="container is-max-desktop">
+
+      <!-- Results -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3 has-text-centered" style="margin-top: -20px; margin-bottom: 10px;">Qualitative Results</h2>
+
+          <div class="container">
+            <h3 class="subtitle has-text-centered" style="margin-bottom: 10px; margin-top: 2rem;">
+              Results of N3V Dataset
+            </h3>
+            <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon-n3v" style="margin-bottom: 10px;">
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="n3vSceneEvent(0)">Coffee Martini</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="n3vSceneEvent(1)">Cook Spinach</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="n3vSceneEvent(2)">Cut rostead Beef</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="n3vSceneEvent(3)">Flame Salmon</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="n3vSceneEvent(4)">Flame Steak</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="n3vSceneEvent(5)">Sear Steak</a>
+                </li>
+            </ul>
+            <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
+                <image src="./static/resources/comp/cook_spinach/MoE.png" alt="MoE-GS (ours)">
+                <image src="./static/resources/comp/cook_spinach/4DGaussians.png" alt="4DGS (CVPR'24)">
+                <image src="./static/resources/comp/cook_spinach/4DGS.png" alt="4DGS (ICLR'24)">
+                <image src="./static/resources/comp/cook_spinach/STG.png" alt="STG (CVPR'24)">
+                <image src="./static/resources/comp/cook_spinach/Ex4DGS.png" alt="Ex4DGS (NeurIPS'24)">
+                <image src="./static/resources/comp/cook_spinach/E-D3DGS.png" alt="E-D3DGS (ECCV'24)">
+            </div>
+          </div>
+
+          <div class="container">
+            <h3 class="subtitle has-text-centered" style="margin-bottom: 10px; margin-top: 2rem;">
+              Results of Technicolor Dataset
+            </h3>
+            <ul class="nav nav-tabs nav-fill nav-justified" id="object-scale-recon-tech" style="margin-bottom: 10px;">
+                <li class="nav-item">
+                  <a class="nav-link active" onclick="TechnicolorSceneEvent(0)">Birthday</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="TechnicolorSceneEvent(1)">Fabien</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="TechnicolorSceneEvent(2)">Painter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="TechnicolorSceneEvent(3)">Theater</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="TechnicolorSceneEvent(4)">Train</a>
+                </li>
+            </ul>
+            <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
+                <image src="./static/resources/comp/cook_spinach/MoE.png" alt="MoE-GS (ours)">
+                <image src="./static/resources/comp/cook_spinach/4DGaussians.png" alt="STG (CVPR'24)">
+                <image src="./static/resources/comp/cook_spinach/4DGS.png" alt="Ex4DGS (NeurIPS'24)">
+                <image src="./static/resources/comp/cook_spinach/STG.png" alt="E-D3DGS (ECCV'24)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video grid -->
+  <!-- Video grid -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+
+        <!-- 가장 바깥쪽 columns (한 행) -->
+        <div class="columns is-centered has-text-centered">
+          <!-- 하나의 column: 여기에는 제목이나 기타 안내 문구만 들어감 -->
+          <div class="column">
+            <h2 class="title is-3">Distillation Results</h2>
+            <h3 class="subtitle has-text-centered">Left : No Distillation / Right : Distillation</h3>
+          </div>
+        </div>
+
+        <!-- 이제 실제 2열 구성할 columns -->
+        <div class="columns is-centered has-text-centered">
+          
+          <!-- 첫 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias6_left" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias6_leftMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+          
+          <!-- 두 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias6_right" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias6_rightMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          
+          <!-- 첫 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias7_left" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias7_leftMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+          
+          <!-- 두 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias7_right" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias7_rightMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          
+          <!-- 첫 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias8_left" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias8_leftMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+          
+          <!-- 두 번째 열 -->
+          <div class="column is-half" style="padding: 20px;">
+
+            <video class="video" width="100%" id="xyalias8_right" loop playsinline autoplay muted src="./static/resources/video/combined_video.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <canvas height=400 class="videoMerge" id="xyalias8_rightMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
+            <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
+              Coffee_martini(Ex4DGS)
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-">
+                    <h2 class="title is-3">Video Presentation</h2>
+                    <div class="columns is-centered has-text-centered">
+                        <div class="column is-four-fifths">
+
+                            <div class="publication-video">
+                                <!-- Youtube embed code here -->
+                                <iframe src="https://www.youtube.com/embed/cZPtwcRepNY" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{lee2024ex4dgs,
+        title     = {Fully Explicit Dynamic Guassian Splatting},
+        author    = {Lee, Junoh and Won, ChangYeon and Jung, Hyunjun and Bae, Inhwan and Jeon, Hae-Gon},
+        booktitle = {Proceedings of the Neural Information Processing Systems},
+        year      = {2024}
+  }</code></pre>
+    </div>
+  </section>
+
+  <section class="section" id="References">
+    <div class="container is-max-desktop content">
+
+          <h3 class="title is-4">References</h3>
+          <div class="content has-text-justified">
+            <ul>
+              <li>
+                <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a>
+              </li>
+              <li>
+                <a href="https://www.cs.umd.edu/~zwicker/publications/EWASplatting-TVCG02.pdf" target="_blank">EWA Splatting</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+              This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+              We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template. 
+              The video comparison with sliding bar is from <a href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a>. 
+              The image comparison with sliding bar is from <a href="https://research.nvidia.com/labs/dir/neuralangelo/">Neuralangelo</a>. 
+            </p>
+          </div>
+        </div>
+            <p></p>
+          </div>
+        </div>
+  </footer>
+
+</body>
+</html>
