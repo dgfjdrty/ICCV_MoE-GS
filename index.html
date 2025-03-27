@@ -122,24 +122,22 @@
                 </div>
   </section> -->
 
-  <!-- <section class="hero teaser">
-    <div class="container" style="max-width: 900px; margin: 0 auto;">
-      <div class="row g-2">
-        <div class="column is-full-width">
-          <div class="video-container" style="width: 100%; position: relative; padding-top: 0; margin-top: 0;">
-            <video class="video" id="xyalias1" loop playsinline autoplay muted 
-                   src="./static/resources/video/white_coffee_videos.mp4" onplay="resizeAndPlay5(this)" 
-                   style="width: 100%; height: auto; position: absolute; top: 0; left: 0; object-fit: contain;">
-            </video>
-          </div>
-          <canvas id="xyalias1Merge" class="videoMerge" style="width: 100%; margin-top: 5px;"></canvas>
-          <h2 class="subtitle text-center mt-1" style="margin-top: 8px;">
-            you have to change this comment
-          </h2>
+  <section class="hello teaser">
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-desktop">
+        <div class="video-container" style="width: 100%; height: suto; position: relative;">
+          <video class="video" loop playsinline autoplay muted
+                src="./static/resources/video/coffee_grid_video.mp4"
+                style="width: 100%; height: auto; object-fit: cover;">
+          </video>
         </div>
+        <hr>
       </div>
     </div>
-  </section> -->
+  </section>
+  
+
+  
 
 
 
@@ -242,13 +240,117 @@
                 <li class="nav-item">
                   <a class="nav-link" onclick="coffeeSceneEvent(4)">E-D3DGS</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="coffeeSceneEvent(5)">GT</a>
+                </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
                 <image src="./static/resources/comp/n3v/4DGaussians/coffee_MoE.png" alt="MoE-GS (ours)">
                 <image src="./static/resources/comp/n3v/4DGaussians/coffee.png" alt="Expert">
-                <image src="./static/resources/comp/n3v/4DGaussians/coffee_weight.png" alt="Expert weight">
             </div>
           </div>
+
+          <section class="hero is-small">
+            <div class="hero-body">
+              <div class="container is-max-desktop">
+              <div class="container has-text-centered">
+                <div id="results-carousel" class="carousel results-carousel">
+                  
+                  <div class="item item-set1">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-seconds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_b1_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item item-set2">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_wb1_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="item item-set3">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_b2_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item item-set4">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-seconds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_wb2_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item item-set5">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_b3_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="item item-set6">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/coffee_wb3_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
 
           <div class="container">
             <h4 class="subtitle has-text-centered" style="margin-bottom: 10px; margin-top: 2rem;">
@@ -270,16 +372,120 @@
               <li class="nav-item">
                 <a class="nav-link" onclick="spinachSceneEvent(4)">E-D3DGS</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="spinachSceneEvent(5)">GT</a>
+              </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
               <image src="./static/resources/comp/n3v/4DGaussians/spinach_MoE.png" alt="MoE-GS (ours)">
               <image src="./static/resources/comp/n3v/4DGaussians/spinach.png" alt="Expert">
-              <image src="./static/resources/comp/n3v/4DGaussians/spinach_weight.png" alt="Expert weight">
             </div>
           </div>
 
+          <section class="hero is-small">
+            <div class="hero-body">
+              <div class="container is-max-desktop">
+              <div class="container has-text-centered">
+                <div id="results-carousel" class="carousel results-carousel">
+                  
+                  <div class="item item-set1">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-seconds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_b0_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item item-set2">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_wb0_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="item item-set3">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_b1_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item item-set4">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-seconds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_wb1_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="item item-set5">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_b2_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="item item-set6">
+                    <div class="columns vertical_center">
+                      <div class="column is-one-thirds">
+                        <div class="column">
+                          <figure>
+                            <video poster="" autoplay controls muted loop playsinline height="100%">
+                              <source src="./static/resources/video/spinach_wb2_grid_video.mp4"
+                                      type="video/mp4">
+                            </video>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
+
           <hr>
-          <h3 class="subtitle has-text-centered" style="margin-bottom: 10px; margin-top: 2rem;">
+          <!-- <h3 class="subtitle has-text-centered" style="margin-bottom: 10px; margin-top: 2rem;">
             Results of Technicolor Dataset
           </h3>
 
@@ -297,11 +503,13 @@
                 <li class="nav-item">
                   <a class="nav-link" onclick="fabienSceneEvent(2)">E-D3DGS</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="fabienSceneEvent(3)">GT</a>
+                </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
                 <image src="./static/resources/comp/technicolor/Ex4DGS/fabien_MoE.png" alt="MoE-GS (ours)">
                 <image src="./static/resources/comp/technicolor/Ex4DGS/fabien.png" alt="Expert">
-                <image src="./static/resources/comp/technicolor/Ex4DGS/fabien_weight.png" alt="Expert weight">
             </div>
           </div>
 
@@ -319,13 +527,15 @@
               <li class="nav-item">
                 <a class="nav-link" onclick="painterSceneEvent(2)">E-D3DGS</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="painterSceneEvent(3)">GT</a>
+              </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
               <image src="./static/resources/comp/technicolor/Ex4DGS/painter_MoE.png" alt="MoE-GS (ours)">
               <image src="./static/resources/comp/technicolor/Ex4DGS/painter.png" alt="Expert">
-              <image src="./static/resources/comp/technicolor/Ex4DGS/painter_weight.png" alt="Expert weight">
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -371,12 +581,11 @@
 
           </div>
         </div>
-        <div class="columns is-centered has-text-centered">
+        <!-- <div class="columns is-centered has-text-centered">
           
-          <!-- 첫 번째 열 -->
           <div class="column is-half" style="padding: 20px;">
 
-            <video class="video" width="100%" id="xyalias7_left" loop playsinline autoplay muted src="./static/resources/video/distill/birthday_distilled_Ex4DGS_videos.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <video class="video" width="100%" id="xyalias7_left" loop playsinline autoplay muted src="./static/resources/video/distill/a_birthday_distilled_Ex4DGS_videos.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
             <canvas height=400 class="videoMerge" id="xyalias7_leftMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
             <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
               Birthday (Ex4DGS)
@@ -384,17 +593,16 @@
 
           </div>
           
-          <!-- 두 번째 열 -->
           <div class="column is-half" style="padding: 20px;">
 
-            <video class="video" width="100%" id="xyalias7_right" loop playsinline autoplay muted src="./static/resources/video/distill/train_distilled_STG_videos.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
+            <video class="video" width="100%" id="xyalias7_right" loop playsinline autoplay muted src="./static/resources/video/distill/a_train_distilled_STG_videos.mp4" onplay="resizeAndPlay(this)" style="height: 400px;"></video>
             <canvas height=400 class="videoMerge" id="xyalias7_rightMerge" style="width: 100%; margin: 0 auto; display: block;"></canvas>
             <p style="font-size: 1.0em; text-align: center; margin-top: 10px;">
               Train (STG)
             </p>
 
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
