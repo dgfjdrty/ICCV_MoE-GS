@@ -46,6 +46,7 @@
   <script src="./static/js/app.js"></script>
   <script src="./static/js/video_comparison.js"></script>
 
+
   <link rel="stylesheet" href="./static/css/dics.original.css">
   <script src="./static/js/event_handler.js"></script>
   <script src="./static/js/dics.original.js"></script>
@@ -122,31 +123,48 @@
                 </div>
   </section> -->
 
-  <section class="hello teaser">
-    <div class="columns is-centered has-text-centered">
-      <div class="container is-max-desktop">
-        <div class="video-container" style="width: 100%; height: suto; position: relative;">
-          <video class="video" loop playsinline autoplay muted
-                src="./static/resources/video/demo_up_grid_video.mp4"
-                style="width: 100%; height: auto; object-fit: cover;">
-          </video>
-        </div>
-        <div class="video-container" style="width: 100%; height: suto; position: relative;">
-          <video class="video" loop playsinline autoplay muted
-                src="./static/resources/video/demo_down_grid_video.mp4"
-                style="width: 100%; height: auto; object-fit: cover;">
-          </video>
-        </div>
-        <hr>
-      </div>
-    </div>
-  </section>
+  <div class="fade-carousel" id="fadeCarousel">
+    <video id="video1" autoplay muted loop playsinline class="active">
+      <source src="./static/resources/video/demo_left_grid_video.mp4" type="video/mp4">
+    </video>
+    <video id="video2" autoplay muted loop playsinline>
+      <source src="./static/resources/video/demo_right_grid_video.mp4" type="video/mp4">
+    </video>
+  </div>
   
-
+  <script>
+    const v1 = document.getElementById('video1');
+    const v2 = document.getElementById('video2');
+    const carousel = document.getElementById('fadeCarousel');
   
-
-
-
+    let current = 0;
+    let intervalId;
+  
+    function startCarousel() {
+      intervalId = setInterval(() => {
+        if (current === 0) {
+          v1.classList.remove('active');
+          v2.classList.add('active');
+        } else {
+          v2.classList.remove('active');
+          v1.classList.add('active');
+        }
+        current = (current + 1) % 2;
+      }, 3000);
+    }
+  
+    function stopCarousel() {
+      clearInterval(intervalId);
+    }
+  
+    // Start on load
+    startCarousel();
+  
+    // Pause on hover
+    carousel.addEventListener('mouseenter', stopCarousel);
+    carousel.addEventListener('mouseleave', startCarousel);
+  </script>
+  
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -245,9 +263,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" onclick="coffeeSceneEvent(4)">E-D3DGS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" onclick="coffeeSceneEvent(5)">GT</a>
                 </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
@@ -377,9 +392,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" onclick="spinachSceneEvent(4)">E-D3DGS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" onclick="spinachSceneEvent(5)">GT</a>
               </li>
             </ul>
             <div class="b-dics" style="width: 1000px; font-weight: 600; margin-top: 10px;">
