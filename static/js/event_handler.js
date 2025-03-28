@@ -177,8 +177,46 @@ document.addEventListener('DOMContentLoaded', domReady);
             }
         }
 
+        function theaterSceneEvent(idx) {
+            let dics = document.querySelectorAll('.b-dics')[6]
+            let sections = dics.getElementsByClassName('b-dics__section')
+            let imagesLength = 2
+            for (let i = 0; i < imagesLength; i++) {
+                let image = sections[i].getElementsByClassName('b-dics__image-container')[0].getElementsByClassName('b-dics__image')[0]
+                switch (idx) {
+                    case 0:
+                        image.src = 'static/resources/comp/technicolor/Ex4DGS/';
+                        break;
+                    case 1:
+                        image.src = 'static/resources/comp/technicolor/STG/';
+                        break;
+                    case 2:
+                        image.src = 'static/resources/comp/technicolor/E-D3DGS/';
+                        break;
+                }
+                switch (i) {
+                    case 0:
+                        image.src = image.src + 'theater_MoE.png';
+                        break;
+                    case 1:
+                        image.src = image.src + 'theater.png';
+                        break;
+                }
+            }
+
+            let scene_list = document.getElementById("technicolor-theater").children;
+            for (let i = 0; i < scene_list.length; i++) {
+                if (idx == i) {
+                    scene_list[i].children[0].className = "nav-link active"
+                }
+                else {
+                    scene_list[i].children[0].className = "nav-link"
+                }
+            }
+        }
+
         function spinachSceneEvent(idx) {
-            let dics = document.querySelectorAll('.b-dics')[1]
+            let dics = document.querySelectorAll('.b-dics')[9]
             let sections = dics.getElementsByClassName('b-dics__section')
             let imagesLength = 2
             for (let i = 0; i < imagesLength; i++) {
@@ -513,43 +551,7 @@ document.addEventListener('DOMContentLoaded', domReady);
 
         
 
-        function theaterSceneEvent(idx) {
-            let dics = document.querySelectorAll('.b-dics')[9]
-            let sections = dics.getElementsByClassName('b-dics__section')
-            let imagesLength = 2
-            for (let i = 0; i < imagesLength; i++) {
-                let image = sections[i].getElementsByClassName('b-dics__image-container')[0].getElementsByClassName('b-dics__image')[0]
-                switch (idx) {
-                    case 0:
-                        image.src = 'static/resources/comp/technicolor/Ex4DGS/';
-                        break;
-                    case 1:
-                        image.src = 'static/resources/comp/technicolor/STG/';
-                        break;
-                    case 2:
-                        image.src = 'static/resources/comp/technicolor/E-D3DGS/';
-                        break;
-                }
-                switch (i) {
-                    case 0:
-                        image.src = image.src + 'theater_MoE.png';
-                        break;
-                    case 1:
-                        image.src = image.src + 'theater.png';
-                        break;
-                }
-            }
-
-            let scene_list = document.getElementById("technicolor-theater").children;
-            for (let i = 0; i < scene_list.length; i++) {
-                if (idx == i) {
-                    scene_list[i].children[0].className = "nav-link active"
-                }
-                else {
-                    scene_list[i].children[0].className = "nav-link"
-                }
-            }
-        }
+        
 
         function trainSceneEvent(idx) {
             let dics = document.querySelectorAll('.b-dics')[10]
@@ -566,6 +568,9 @@ document.addEventListener('DOMContentLoaded', domReady);
                         break;
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
+                        break;
+                    case 3:
+                        image.src = 'static/resources/comp/n3v/GT/';
                         break;
                 }
                 switch (i) {
