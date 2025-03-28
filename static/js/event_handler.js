@@ -155,9 +155,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
                         break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -202,9 +199,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
                         break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -243,9 +237,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
                         break;
-                    case 3:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -283,9 +274,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                         break;
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
-                        break;
-                    case 3:
-                        image.src = 'static/resources/comp/n3v/GT/';
                         break;
                 }
                 switch (i) {
@@ -331,9 +319,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
                         break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -378,9 +363,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
                         break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;    
                 }
                 switch (i) {
                     case 0:
@@ -424,9 +406,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                         break;
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
-                        break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
                         break;
                 }
                 switch (i) {
@@ -472,9 +451,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 4:
                         image.src = 'static/resources/comp/n3v/E-D3DGS/';
                         break;
-                    case 5:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -512,9 +488,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                         break;
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
-                        break;
-                    case 3:
-                        image.src = 'static/resources/comp/n3v/GT/';
                         break;
                 }
                 switch (i) {
@@ -556,9 +529,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
                         break;
-                    case 3:
-                        image.src = 'static/resources/comp/n3v/GT/';
-                        break;
                 }
                 switch (i) {
                     case 0:
@@ -596,9 +566,6 @@ document.addEventListener('DOMContentLoaded', domReady);
                         break;
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
-                        break;
-                    case 3:
-                        image.src = 'static/resources/comp/n3v/GT/';
                         break;
                 }
                 switch (i) {
