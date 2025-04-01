@@ -185,10 +185,10 @@ document.addEventListener('DOMContentLoaded', domReady);
                 let image = sections[i].getElementsByClassName('b-dics__image-container')[0].getElementsByClassName('b-dics__image')[0]
                 switch (idx) {
                     case 0:
-                        image.src = 'static/resources/comp/technicolor/Ex4DGS/';
+                        image.src = 'static/resources/comp/technicolor/STG/';
                         break;
                     case 1:
-                        image.src = 'static/resources/comp/technicolor/STG/';
+                        image.src = 'static/resources/comp/technicolor/Ex4DGS/';
                         break;
                     case 2:
                         image.src = 'static/resources/comp/technicolor/E-D3DGS/';
